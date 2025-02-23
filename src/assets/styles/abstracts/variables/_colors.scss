@@ -1,0 +1,56 @@
+//Page background
+$color-page-background: #0F0F0F; // Background color for the entire page
+
+//Absolute colors
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+//Status colors
+$color-secondary: #fbbc05;
+$color-success: #34a853;
+$color-error: #ea4335;
+
+//Gray colors (neutrals)
+$color-gray-90: #E6E6E6; // Light gray
+$color-gray-60: #98989A; // Medium gray
+$color-gray-40: #656567; // Slightly darker gray
+$color-gray-35: #59595A; // Darker gray
+$color-gray-30: #4C4C4D; // Very dark gray
+$color-gray-20: #333333; // Darker neutral
+$color-gray-15: #262626; // Darkest gray
+$color-gray-10: #0F0F0F; // Almost black
+
+//Green colors 
+$color-green-90: #F9FFF0; // Light green
+$color-green-80: #F5FFE5; // Lighter green
+$color-green-70: #CFEBE4; // Medium green
+$color-green-30: #ECFFCC; // Slightly darker green
+$color-green-10: #BEF6E9; // Darkest green
+
+// Background colors for secondary buttons and other sections with backdrop filter
+$bg-backdrop-light: rgba(36, 36, 36, 0.2); // Light transparent background for backdrop effect
+$bg-backdrop-dark: rgba(0, 0, 0, 0.5); // Darker transparent background for backdrop effect
+
+//Text colors
+$color-text-primary: $color-gray-90; // Main text color (default)
+$color-text-absolute-primary: $color-white; // Primary text color for contrast (e.g., for dark backgrounds)
+$color-text-secondary: $color-gray-60; // Secondary text color (less emphasized)
+$color-text-muted: $color-gray-40; // Muted text (e.g., for placeholders)
+$color-text-heading: $color-gray-10; // Text for headings (dark for contrast and readability)
+$color-text-success: $color-success; // Color for success messages or text
+$color-text-error: $color-error; // Color for error messages or text
+$color-text-light: $color-gray-90; // Light text (used on dark backgrounds)
+$color-text-dark: $color-gray-10; // Dark text (used on light backgrounds)
+$color-text-inverse: $color-gray-10; // Inverse text color (for text on dark backgrounds)
+$color-text-button-total-black: $color-black; // Text color for buttons (total black)
+$color-text-button-total-white: $color-white; // Text color for buttons (total white)
+
+//Background colors for text elements
+$bg-text-light: $color-gray-10; // Light background for text on dark mode
+$bg-text-dark: $color-gray-90; // Dark background for text on light mode
+$bg-button-secondary: $color-gray-15; // Background color for secondary buttons
+$bg-button-primary: $color-green-10; // Background color for primary buttons
+
+//Border colors
+$color-border-primary: $color-gray-15; // Primary border color
+$color-border-secondary: $color-gray-30; // Secondary border color
