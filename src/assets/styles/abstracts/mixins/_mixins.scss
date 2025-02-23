@@ -75,36 +75,6 @@
     gap: $gap;
 }
 
-//doc: === text-styles === //
-@mixin default-text {
-    color: $text-light-grey;
-    font-family: var(--font-roboto-flex);
-    font-size: $font-size-medium;
-    font-style: normal;
-    font-weight: $font-weight-regular;
-    line-height: 150%;
-}
-
-@mixin section-title-bold {
-    color: $text-white;
-    font-family: var(--font-roboto-flex);
-    font-size: $font-size-ultra-huge;
-    font-style: normal;
-    font-weight: $font-weight-bold;
-    line-height: 100%;
-    text-transform: uppercase;
-}
-
-@mixin section-title-regular {
-    color: $text-white;
-    font-family: var(--font-roboto-flex);
-    font-size: $font-size-ultra-huge;
-    font-style: normal;
-    font-weight: $font-weight-regular;
-    line-height: 100%;
-    text-transform: uppercase;
-}
-
 //doc: === font-size mixin === //
 
 @mixin font-size($font-size,

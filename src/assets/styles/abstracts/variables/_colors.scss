@@ -1,6 +1,3 @@
-//Page background
-$color-page-background: #0F0F0F; // Background color for the entire page
-
 //Absolute colors
 $color-white: #FFFFFF;
 $color-black: #000000;
@@ -46,6 +43,7 @@ $color-text-button-total-black: $color-black; // Text color for buttons (total b
 $color-text-button-total-white: $color-white; // Text color for buttons (total white)
 
 //Background colors for text elements
+$bg-main: $color-black; // Background color for main content
 $bg-text-light: $color-gray-10; // Light background for text on dark mode
 $bg-text-dark: $color-gray-90; // Dark background for text on light mode
 $bg-button-secondary: $color-gray-15; // Background color for secondary buttons

@@ -13,16 +13,18 @@
 *,
 *::before,
 *::after {
-    font-family: $font-primary;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-medium;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: $color-page-background;
-    color: $color-text-primary;
+    font-family: $font-quinary;
+    font-size: $font-size-lg;
+    color: $color-text-absolute-primary;
+    background-color: $bg-main;
 
     &::-webkit-scrollbar {
         width: 9px;
