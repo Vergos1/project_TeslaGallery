@@ -1,6 +1,7 @@
 //Absolute colors
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-black: #000000;
+$color-blue: #0081ff;
 
 //Status colors
 $color-secondary: #fbbc05;
@@ -8,21 +9,21 @@ $color-success: #34a853;
 $color-error: #ea4335;
 
 //Gray colors (neutrals)
-$color-gray-90: #E6E6E6; // Light gray
-$color-gray-60: #98989A; // Medium gray
+$color-gray-90: #e6e6e6; // Light gray
+$color-gray-60: #98989a; // Medium gray
 $color-gray-40: #656567; // Slightly darker gray
-$color-gray-35: #59595A; // Darker gray
-$color-gray-30: #4C4C4D; // Very dark gray
+$color-gray-35: #59595a; // Darker gray
+$color-gray-30: #4c4c4d; // Very dark gray
 $color-gray-20: #333333; // Darker neutral
 $color-gray-15: #262626; // Darkest gray
-$color-gray-10: #0F0F0F; // Almost black
+$color-gray-10: #0f0f0f; // Almost black
 
-//Green colors 
-$color-green-90: #F9FFF0; // Light green
-$color-green-80: #F5FFE5; // Lighter green
-$color-green-70: #CFEBE4; // Medium green
-$color-green-30: #ECFFCC; // Slightly darker green
-$color-green-10: #BEF6E9; // Darkest green
+//Green colors
+$color-green-90: #f9fff0; // Light green
+$color-green-80: #f5ffe5; // Lighter green
+$color-green-70: #cfebe4; // Medium green
+$color-green-30: #ecffcc; // Slightly darker green
+$color-green-10: #bef6e9; // Darkest green
 
 // Background colors for secondary buttons and other sections with backdrop filter
 $bg-backdrop-light: rgba(36, 36, 36, 0.2); // Light transparent background for backdrop effect
