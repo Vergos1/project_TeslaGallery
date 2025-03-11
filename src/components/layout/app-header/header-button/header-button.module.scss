@@ -1,15 +1,13 @@
 @import '/src/assets/styles/abstracts/variables';
+@import '/src/assets/styles/abstracts/mixins';
 
 .headerButtons {
-  display: flex;
-  align-items: center;
+  @include flex-center;
   gap: $spacing-xl;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   background-color: $color-gray-15;
   color: $color-white;
   border: none;
@@ -46,9 +44,8 @@
   height: $btn-height-md;
   padding: 0px 25px;
   border-radius: $border-radius-xxxl;
-  display: flex;
+  @include flex-center;
   cursor: pointer;
-  align-items: center;
   gap: 27px;
   transition:
     background-color 0.3s ease,
