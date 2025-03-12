@@ -1,0 +1,520 @@
+//doc: === flex mixins === //
+@mixin flex-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-around {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+@mixin gap($gap) {
+    display: grid;
+    gap: $gap;
+}
+
+//doc: === font-size mixin === //
+
+@mixin font-size($font-size,
+    $line-height: normal,
+    $letter-spacing: normal) {
+    font-size: $font-size * 1px;
+    // font-size: $font-size * 0.1rem;
+    // example using rem values and 62.5% font-size so 1rem = 10px
+
+    @if $line-height==normal {
+        line-height: normal;
+    }
+
+    @else {
+        line-height: $line-height / $font-size;
+    }
+
+    @if $letter-spacing==normal {
+        letter-spacing: normal;
+    }
+
+    @else {
+        letter-spacing: #{$letter-spacing / $font-size}em;
+    }
+}
+
+/* ===== Usage ===== */
+//p {
+//  @include font-size(12, 18, 1.2);
+//  // returns
+//  font-size: 12px;
+//  line-height: 1.5; // 18 / 12
+//  letter-spacing: 0.1em;
+//}
+
+//doc: === font-face mixin === //
+
+@mixin font-face($name, $file) {
+    @font-face {
+        font-family: '#{$name}';
+        src: url('../fonts/#{$file}.eot');
+        src: url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/#{$file}.woff') format('woff'),
+        url('../fonts/#{$file}.ttf') format('truetype'),
+        url('../fonts/#{$file}.svg?#webfont') format('svg');
+    }
+}
+
+/* ===== Usage ===== */
+//@include font-face("MyFont", "myfont");
+
+//doc === cover-background mixin === //
+@mixin cover-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ===== Usage ===== */
+//div {
+//  background-images: url("cute-doggo.png");
+//  @include cover-background;
+//}
+
+//doc === media queries mixin === //
+
+@mixin large-desktop {
+    @media (min-width: (1920px)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: (1260px)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: (1080px)) {
+        @content;
+    }
+}
+
+@mixin tablet-sm {
+    @media (max-width: (740px)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: (600px)) {
+        @content;
+    }
+}
+
+@mixin mobile-sm {
+    @media (max-width: (480px)) {
+        @content;
+    }
+}
+
+/* ===== Usage ===== */
+//h1 {
+//  font-size: 10px;
+//
+//  @include tablet {
+//    font-size: 12px;
+//  }
+//
+//  @include desktop {
+//    font-size: 20px;
+//  }
+//}
+
+//doc === z-index mixin === //
+$elements: landing, header, modal, very-important-modal;
+
+@mixin z-index($id) {
+    z-index: index($elements, $id);
+}
+
+//doc === fade mixin === //
+//Quick mixin to hide or show an element, useful for fade in/out animations
+@mixin fade($type) {
+    @if $type=='hide' {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition:
+            visibility 1s,
+            opacity 1s;
+        -o-transition:
+            visibility 1s,
+            opacity 1s;
+        transition:
+            visibility 1s,
+            opacity 1s;
+    }
+
+    @else if $type=='show' {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition:
+            visibility 1s,
+            opacity 1s;
+        -o-transition:
+            visibility 1s,
+            opacity 1s;
+        transition:
+            visibility 1s,
+            opacity 1s;
+    }
+}
+
+//doc === skew-background mixin === //
+//link: https://codepen.io/alemesa/embed/XWbXLNK?height=600&default-tab=result&embed-version=2#result-box
+@mixin skew-background-transition($initial,
+    $hover,
+    $inverted: false) {
+    background-size: 200% 100%;
+    background: -o-linear-gradient(left,
+            $hover 0%,
+            $hover 50%,
+            $initial 50%,
+            $initial 100%) no-repeat right bottom;
+    background: -webkit-gradient(linear,
+            left top, right top,
+            from($hover),
+            color-stop(50%, $hover),
+            color-stop(50%, $initial),
+            to($initial)) no-repeat right bottom;
+    background: linear-gradient(90deg,
+            $hover 0%,
+            $hover 50%,
+            $initial 50%,
+            $initial 100%) no-repeat right bottom;
+
+    @if $inverted {
+        background-position: left bottom;
+    }
+
+    -webkit-transition: background-position 0.25s ease-out;
+
+    -o-transition: background-position 0.25s ease-out;
+
+    transition: background-position 0.25s ease-out;
+
+    &:hover {
+        background-position: left bottom;
+
+        @if $inverted {
+            background-position: right bottom;
+        }
+    }
+}
+
+// ===== Usage =====
+//div {
+//  @include skew-background-transition(#f00, #0f0);
+//}
+
+//doc === clearfix mixin === //
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// ===== Usage =====
+//div {
+//  @include clearfix;
+//}
+
+//doc === box-sizing mixin === //
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5 // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+// ===== Usage =====
+//div {
+//  @include box-sizing(border-box);
+//}
+
+//doc === border-radius mixin === //
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+// ===== Usage =====
+//div {
+//  @include border-radius(5px);
+//}
+
+//doc === opacity mixin === //
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// ===== Usage =====
+//div {
+//  @include opacity(0.5);
+//}
+
+//doc === center-block mixin === //
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ===== Usage =====
+//div {
+//  @include center-block;
+//}
+
+//doc === input-placeholder mixin === //
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+// ===== Usage =====
+//input {
+//  @include input-placeholder {
+//    color: red;
+//  }
+//}
+
+//doc === mq mixin === //
+$breakpoints: (
+    'phone': 400px,
+    'phone-wide': 480px,
+    'phablet': 560px,
+    'tablet-small': 640px,
+    'tablet': 768px,
+    'tablet-wide': 1024px,
+    'desktop': 1248px,
+    'desktop-wide': 1440px,
+);
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type ==max {
+            $width: $width - 1px;
+        }
+
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// ===== Usage =====
+//div {
+//  @include mq(tablet) {
+//    color: red;
+//  }
+//}
+
+//doc === truncate mixin === //
+@mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+@mixin truncate-vert($truncation-boundary, $truncation-boundary-vert) {
+    max-height: $truncation-boundary;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $truncation-boundary-vert;
+    -webkit-box-orient: vertical;
+}
+
+// ===== Usage =====
+//div {
+//  @include truncate(100px);
+//}
+
+//doc === css3-prefix mixin === //
+@mixin css3-prefix($prop, $value) {
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+    -o-#{$prop}: #{$value};
+    #{$prop}: #{$value};
+}
+
+// ===== Usage =====
+//div {
+//  @include css3-prefix(border-radius, 5px);
+//}
+
+//doc === keyframes mixin === //
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+
+// ===== Usage =====
+//@include keyframes(fade-out) {
+//  0% { opacity: 1; }
+//  90% { opacity: 0; }
+//}
+//// Add animation to element
+//.element {
+//  width: 100px;
+//  height: 100px;
+//  background: black;
+//  @include animation('fade-out 5s 3');
+//}
+
+//doc === abs-position mixin === //
+@mixin abs-position($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// ===== Usage =====
+//div {
+//  @include abs-position(100px, 0, 0, auto);
+//}
+
+//doc === transition mixin === //
+@mixin transition($transition, $transitionSecond: null) {
+    -webkit-transition: $transition, $transitionSecond;
+    -o-transition: $transition, $transitionSecond;
+    transition: $transition, $transitionSecond;
+}
+
+//doc === transform mixin === //
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+// ===== Usage =====
+//div {
+//  @include transform(rotate(45deg));
+//}
+
+//doc === overlay mixin === //
+@mixin overlay() {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+// ===== Usage =====
+//div {
+//  @include overlay();
+//}

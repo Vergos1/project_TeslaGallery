@@ -1,49 +1,6 @@
 ## README
 
-## Structure
-
-└── **src/**
-├─── **assets/**
-│ ├─── ordinary
-│ ├─── simple
-│ ├─── smart
-│ └─── ui
-├─── **components/**
-│ ├─── ordinary
-│ ├─── simple
-│ ├─── smart
-│ └─── ui
-├─── **containers**
-├─── **core/**
-│ ├─── config
-│ ├─── constants
-│ ├─── hooks
-│ ├─── models
-│ ├─── schemes
-│ ├─── services
-│ ├─── store
-│ ├─── theme
-│ ├─── types
-│ ├─── utils
-│ └─── api.ts
-├─── **pages**
-├─── **routes**
-├─── styles
-├─── app.tsx
-└─── index.tsx
-
 ## Component Classification
-
-### Folder structure
-
-└─── **src/**
-├─── **components/**
-│ ├─── ordinary
-│ ├─── simple
-│ ├─── smart
-│ └─── ui
-└─── **containers/**
-└─── **pages/**
 
 ### Component Groups
 

@@ -1,5 +1,5 @@
+import '@styles/main.scss'
 import React from 'react'
-import '../assets/styles/index.scss'
 import { AppProvider } from './AppProvider'
 import AppRouter from './AppRouter'
 

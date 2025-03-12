@@ -1,0 +1,22 @@
+@import '/src/assets/styles/abstracts/mixins';
+
+.container {
+  padding: 70px 120px;
+  @include flex-between;
+}
+
+@media (max-width: (1480px)) {
+  .logo {
+    width: 140px;
+  }
+}
+@media (max-width: (1290px)) {
+  .container {
+    padding: 70px 60px;
+  }
+}
+@include tablet {
+  .logo {
+    width: 100px;
+  }
+}

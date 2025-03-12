@@ -1,12 +1,14 @@
+import { AppHeader } from '@components/layout'
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import AppHeader from './../components/app-header/app-header'
 
 const AppLayout = () => {
   return (
     <>
       <AppHeader />
-      <Outlet />
+      <main className='app'>
+        <Outlet />
+      </main>
     </>
   )
 }

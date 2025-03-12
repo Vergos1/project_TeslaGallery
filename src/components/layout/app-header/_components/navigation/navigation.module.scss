@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  gap: 49px;
+}
+@media (max-width: (1650px)) {
+  .list {
+    gap: 10px;
+  }
+}

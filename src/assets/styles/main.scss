@@ -1,0 +1,63 @@
+//Abstracts imports 
+@use './abstracts/variables' as *;
+@use './abstracts/mixins' as *;
+//Base imports
+@use './base' as *;
+//Themes imports
+@use './themes' as *;
+//Components imports
+@use './components' as *;
+
+
+//Global styles
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-quinary;
+    font-size: $font-size-lg;
+    color: $color-text-absolute-primary;
+    background-color: $bg-main;
+
+    &::-webkit-scrollbar {
+        width: 9px;
+        height: 9px;
+
+        -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $color-gray-30;
+
+        -webkit-transition: background-color 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-green-10;
+        border-radius: 10px;
+        border: 2px solid $color-gray-30;
+
+        -webkit-transition: background-color 0.5s ease-in-out, border-color 0.3s ease-in-out;
+        transition: background-color 0.5s ease-in-out, border-color 0.3s ease-in-out;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: $color-green-90;
+    }
+
+    &::-webkit-scrollbar-horizontal {
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        display: block;
+    }
+}
