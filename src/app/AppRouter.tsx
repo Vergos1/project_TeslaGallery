@@ -1,9 +1,8 @@
-import { lazy, Suspense } from 'react'
+import { HomePage, NotFoundPage } from 'pages'
+import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { AppRoutesEnum } from '../core/types/routes'
 import AppLayout from './AppLayout'
-
-const HomePage = lazy(() => import('../pages/home/home'))
 
 const AppRouter = () => {
   return (
@@ -11,8 +10,8 @@ const AppRouter = () => {
       <Routes>
         <Route path={AppRoutesEnum.Home} element={<AppLayout />}>
           <Route index element={<HomePage />} />
-          {/* <Route path={AppRoutesEnum.NotFound} element={<HomePage />} /> */}
         </Route>
+        <Route path={AppRoutesEnum.NotFound} element={<NotFoundPage />} />
       </Routes>
     </Suspense>
   )
