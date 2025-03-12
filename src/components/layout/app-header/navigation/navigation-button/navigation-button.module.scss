@@ -1,0 +1,29 @@
+@import '/src/assets/styles/abstracts/variables';
+@import '/src/assets/styles/abstracts/mixins';
+.item {
+}
+.button {
+  padding: $spacing-xs $spacing-md;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-md;
+  color: $color-white;
+  background-color: $color-black;
+  border: $border-width-sm solid transparent;
+  box-sizing: border-box;
+  border-radius: $border-radius-xxxl;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform $animation-duration-fast ease;
+  &:hover {
+    transform: scale(1.05);
+    color: $color-blue;
+    border-color: $color-blue;
+
+    background-color: $color-gray-15;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

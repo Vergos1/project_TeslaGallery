@@ -1,0 +1,6 @@
+@import '/src/assets/styles/abstracts/mixins';
+
+.container {
+  padding: 70px 120px;
+  @include flex-between;
+}
