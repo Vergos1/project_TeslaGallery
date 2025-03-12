@@ -5,15 +5,15 @@ export const HeaderButtons = () => {
   return (
     <div className={styles.headerButtons}>
       <button className={`${styles.button} ${styles.searchButton}`}>
-        <img src='/public/search.svg' alt='' />
+        <img className={styles.icon} src='/public/search.svg' alt='' />
         <span>Search</span>
       </button>
 
       <button className={styles.button}>
-        <img src='/public/user.svg' alt='' />
+        <img className={styles.icon} src='/public/user.svg' alt='' />
       </button>
       <button className={styles.button}>
-        <img src='/public/menu.svg' alt='' />
+        <img className={styles.icon} src='/public/menu.svg' alt='' />
       </button>
     </div>
   )

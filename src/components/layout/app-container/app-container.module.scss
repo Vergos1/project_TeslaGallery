@@ -1,20 +1,20 @@
 @import '../../../assets/styles/abstracts/mixins/_mixins';
 
 .container {
-    margin: 0 auto;
-    padding: 100px 0;
-    max-width: 1460px;
-    width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1460px;
+  width: 100%;
 
-    @include desktop {
-        max-width: 932px;
-    }
+  @include desktop {
+    max-width: 932px;
+  }
 
-    @include tablet {
-        max-width: 728px;
-    }
+  @include tablet {
+    max-width: 728px;
+  }
 
-    @include tablet-sm {
-        max-width: calc(100% - 40px);
-    }
+  @include tablet-sm {
+    max-width: calc(100% - 40px);
+  }
 }

@@ -1,7 +1,6 @@
 @import '/src/assets/styles/abstracts/variables';
 @import '/src/assets/styles/abstracts/mixins';
-.item {
-}
+
 .button {
   padding: $spacing-xs $spacing-md;
   font-weight: $font-weight-medium;
@@ -25,5 +24,15 @@
   }
   &:active {
     transform: scale(0.95);
+  }
+}
+@media (max-width: (1490px)) {
+  .button {
+    padding: 4px 6px;
+  }
+}
+@media (max-width: (990px)) {
+  .button {
+    font-size: 14px;
   }
 }

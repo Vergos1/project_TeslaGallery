@@ -10,9 +10,8 @@ export const AppHeader = () => {
   return (
     <header className={header}>
       <div className={container}>
-        <h1 className={logo}>
-          <img src='/public/tesla-logo.svg' alt='logo' />
-        </h1>
+        <img src='/public/tesla-logo.svg' alt='logo' className={logo} />
+
         <Navigation navigationList={NAVIGATION} />
         <HeaderButtons></HeaderButtons>
       </div>
