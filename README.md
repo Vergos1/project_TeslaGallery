@@ -2,17 +2,6 @@
 
 ## Component Classification
 
-### Folder structure
-
-└─── **src/**
-├─── **components/**
-│ ├─── ordinary
-│ ├─── simple
-│ ├─── smart
-│ └─── ui
-└─── **containers/**
-└─── **pages/**
-
 ### Component Groups
 
 - **Smart**
