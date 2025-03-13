@@ -1,6 +1,6 @@
 import { NAVIGATION } from '@core/constants/navigation.constants'
 import React from 'react'
-import { HeaderButtons } from './_components/header-button/header-button'
+import { HeaderButtons } from '../../ui/header-button/header-button'
 import { Navigation } from './_components/navigation/navigation'
 import styles from './app-header.module.scss'
 
