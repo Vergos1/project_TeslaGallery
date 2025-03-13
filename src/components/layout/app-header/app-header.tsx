@@ -13,7 +13,7 @@ export const AppHeader = () => {
         <img src='/public/tesla-logo.svg' alt='logo' className={logo} />
 
         <Navigation navigationList={NAVIGATION} />
-        <HeaderButtons></HeaderButtons>
+        <HeaderButtons />
       </div>
     </header>
   )
