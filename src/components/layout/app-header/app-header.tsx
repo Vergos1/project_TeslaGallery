@@ -1,8 +1,8 @@
 import { NAVIGATION } from '@core/constants/navigation.constants'
 import React from 'react'
+import { HeaderButtons } from './_components/header-button/header-button'
+import { Navigation } from './_components/navigation/navigation'
 import styles from './app-header.module.scss'
-import { Navigation } from './navigation/navigation'
-import { HeaderButtons } from '../app-header/header-button/header-button'
 
 const { header, container, logo } = styles
 
