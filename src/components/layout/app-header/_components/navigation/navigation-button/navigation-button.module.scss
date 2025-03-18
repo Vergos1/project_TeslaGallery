@@ -26,6 +26,7 @@
     transform: scale(0.95);
   }
 }
+
 @media (max-width: (1490px)) {
   .button {
     padding: 4px 6px;
@@ -34,5 +35,13 @@
 @media (max-width: (990px)) {
   .button {
     font-size: 14px;
+  }
+}
+@media (hover: none) {
+  .button:hover {
+    background-color: transparent;
+    transform: none;
+    border-color: $bg-backdrop-dark;
+    color: white;
   }
 }

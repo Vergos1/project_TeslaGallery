@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './header-button.module.scss'
-
-const BUTTONS = [
-  { src: '/public/user.svg', alt: 'User' },
-  { src: '/public/menu.svg', alt: 'Menu' }
-]
-export const HeaderButtons = () => {
+interface HeaderButtonsProps {
+  isOpen: boolean
+  toggleBurger: () => void
+}
+const BUTTONS = [{ src: '/public/user.svg', alt: 'User' }]
+export const HeaderButtons: React.FC<HeaderButtonsProps> = ({ isOpen, toggleBurger }) => {
   return (
     <div className={styles.headerButtons}>
       <button className={`${styles.button} ${styles.searchButton}`}>
@@ -18,6 +18,9 @@ export const HeaderButtons = () => {
           <img className={styles.icon} src={src} alt={alt} />
         </button>
       ))}
+      <button onClick={toggleBurger} className={styles.burgerButton}>
+        <img className={styles.icon} src={isOpen ? '/public/menu-vertically.svg' : '/public/menu.svg'} alt='Menu' />
+      </button>
     </div>
   )
 }

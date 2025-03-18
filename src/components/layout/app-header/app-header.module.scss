@@ -1,4 +1,5 @@
 @import '/src/assets/styles/abstracts/mixins';
+@import '/src/assets/styles/abstracts/variables';
 
 .container {
   padding: 70px 120px;
@@ -15,8 +16,43 @@
     padding: 70px 60px;
   }
 }
+@media (max-width: (400px)) {
+  .container {
+    padding: 70px 30px;
+  }
+}
 @include tablet {
   .logo {
     width: 100px;
+  }
+}
+@media (max-width: 963px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 964px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .mobileMenu {
+    right: 20px;
+    transform: translateY(-5px);
   }
 }
