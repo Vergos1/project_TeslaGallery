@@ -67,3 +67,14 @@
         font-size: 14px;
     }
 }
+
+@media (hover: none) {
+    .button:hover {
+        background-color: transparent;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border-color: $bg-backdrop-dark;
+        color: white;
+    }
+}
