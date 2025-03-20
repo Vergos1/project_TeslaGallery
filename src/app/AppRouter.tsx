@@ -1,3 +1,4 @@
+import { Preloader } from '@components/ui'
 import { HomePage, NotFoundPage } from 'pages'
 import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
@@ -6,7 +7,7 @@ import AppLayout from './AppLayout'
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<div>loading...</div>}>
+    <Suspense fallback={<Preloader />}>
       <Routes>
         <Route path={AppRoutesEnum.Home} element={<AppLayout />}>
           <Route index element={<HomePage />} />

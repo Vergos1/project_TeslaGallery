@@ -1,4 +1,4 @@
-@import "../../../../../assets/styles/abstracts/variables/index";
+@use '../../../../../assets/styles/abstracts/variables' as *;
 
 .slide {
     width: 100%;
@@ -61,11 +61,11 @@
 }
 
 .red {
-    color: #F10221;
+    color: #f10221;
 }
 
 .blue {
-    color: #0081FF;
+    color: #0081ff;
 }
 
 .white {

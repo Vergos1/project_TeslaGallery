@@ -2,26 +2,30 @@ import Model3Image from '@assets/images/model-3.png'
 import ModelSImage from '@assets/images/model-s.png'
 import ModelXImage from '@assets/images/model-x.png'
 import ModelYImage from '@assets/images/model-y.png'
-import { TeslaModel, TeslaTagColor } from '@core/types'
+import { TeslaModel, TeslaModelName, TeslaTagColor } from '@core/types'
 
-export const teslaModelsList = [
+export const TeslaModelNamesList: TeslaModel[] = [
   {
-    name: TeslaModel.ModelS,
+    id: 0,
+    name: TeslaModelName.ModelS,
     color: TeslaTagColor.Blue,
     image: ModelSImage
   },
   {
-    name: TeslaModel.Model3,
+    id: 1,
+    name: TeslaModelName.Model3,
     color: TeslaTagColor.Red,
     image: Model3Image
   },
   {
-    name: TeslaModel.ModelX,
+    id: 2,
+    name: TeslaModelName.ModelX,
     color: TeslaTagColor.White,
     image: ModelXImage
   },
   {
-    name: TeslaModel.ModelY,
+    id: 3,
+    name: TeslaModelName.ModelY,
     color: TeslaTagColor.White,
     image: ModelYImage
   }

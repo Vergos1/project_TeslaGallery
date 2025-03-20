@@ -1,39 +1,39 @@
-@import "../../assets/styles/abstracts/variables/typography";
+@import '../../assets/styles/abstracts/variables/typography';
 
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .title {
-    font-family: $font-nonary;
-    font-size: $font-size-xxxl;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-heading;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
+  font-family: $font-nonary;
+  font-size: $font-size-xxxl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
 
-    &::before {
-        content: "404";
-        display: block;
-        position: absolute;
-        text-align: center;
-        top: -50px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.12;
-        font-size: $font-size-backdrop;
-        font-weight: $font-weight-bold;
-        font-family: $font-elevenary;
-    }
+  &::before {
+    content: '404';
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: -50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.12;
+    font-size: $font-size-backdrop;
+    font-weight: $font-weight-bold;
+    font-family: $font-elevenary;
+  }
 }

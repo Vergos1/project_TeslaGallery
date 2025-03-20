@@ -1,8 +1,8 @@
+import { TeslaModelName } from '@core/types'
+
 export const NAVIGATION = [
-  { name: 'Model S' },
-  { name: 'Model 3' },
-  { name: 'Model X' },
-  { name: 'Model Y' },
-  { name: 'Solar Roof' },
-  { name: 'Solar Panels' }
+  { id: 0, name: TeslaModelName.ModelS },
+  { id: 1, name: TeslaModelName.Model3 },
+  { id: 2, name: TeslaModelName.ModelX },
+  { id: 3, name: TeslaModelName.ModelY }
 ]
