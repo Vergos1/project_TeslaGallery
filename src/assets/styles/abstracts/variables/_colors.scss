@@ -26,8 +26,18 @@ $color-green-30: #ecffcc; // Slightly darker green
 $color-green-10: #bef6e9; // Darkest green
 
 // Background colors for secondary buttons and other sections with backdrop filter
-$bg-backdrop-light: rgba(36, 36, 36, 0.2); // Light transparent background for backdrop effect
-$bg-backdrop-dark: rgba(0, 0, 0, 0.5); // Darker transparent background for backdrop effect
+$bg-backdrop-light: rgba(
+  36,
+  36,
+  36,
+  0.2
+); // Light transparent background for backdrop effect
+$bg-backdrop-dark: rgba(
+  0,
+  0,
+  0,
+  0.5
+); // Darker transparent background for backdrop effect
 
 //Text colors
 $color-text-primary: $color-gray-90; // Main text color (default)

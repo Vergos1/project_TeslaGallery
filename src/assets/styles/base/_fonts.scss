@@ -1,94 +1,84 @@
- @font-face {
-     font-family: 'SF UI Text Regular';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Regular.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Regular.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'SF UI Text Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/assets/fonts/SFUIText-RegularItalic.woff')
+    format('woff');
+}
 
- @font-face {
-     font-family: 'SF UI Text Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/assets/fonts/SFUIText-RegularItalic.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Light.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'SF UI Text Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-LightItalic.woff') format('woff');
+}
 
- @font-face {
-     font-family: 'SF UI Text Light';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Light.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Medium.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'SF UI Text Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-MediumItalic.woff') format('woff');
+}
 
- @font-face {
-     font-family: 'SF UI Text Light Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-LightItalic.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Semibold.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'SF UI Text Semibold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-SemiboldItalic.woff') format('woff');
+}
 
- @font-face {
-     font-family: 'SF UI Text Medium';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Medium.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Bold.woff') format('woff');
+}
 
+@font-face {
+  font-family: 'SF UI Text Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-BoldItalic.woff') format('woff');
+}
 
- @font-face {
-     font-family: 'SF UI Text Medium Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-MediumItalic.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Heavy';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-Heavy.woff') format('woff');
+}
 
-
- @font-face {
-     font-family: 'SF UI Text Semibold';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Semibold.woff') format('woff');
- }
-
-
- @font-face {
-     font-family: 'SF UI Text Semibold Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-SemiboldItalic.woff') format('woff');
- }
-
-
- @font-face {
-     font-family: 'SF UI Text Bold';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Bold.woff') format('woff');
- }
-
-
- @font-face {
-     font-family: 'SF UI Text Bold Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-BoldItalic.woff') format('woff');
- }
-
-
- @font-face {
-     font-family: 'SF UI Text Heavy';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-Heavy.woff') format('woff');
- }
-
-
- @font-face {
-     font-family: 'SF UI Text Heavy Italic';
-     font-style: normal;
-     font-weight: normal;
-     src: url('/src/assets/fonts/SFUIText-HeavyItalic.woff') format('woff');
- }
+@font-face {
+  font-family: 'SF UI Text Heavy Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/src/assets/fonts/SFUIText-HeavyItalic.woff') format('woff');
+}

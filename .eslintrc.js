@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/recommended', 'prettier'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:import/recommended',
+    'prettier'
+  ],
   rules: {
     'jsx-a11y/alt-text': 'off',
     'react/display-name': 'off',
@@ -59,7 +63,12 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', ['internal', 'parent', 'sibling', 'index'], ['object', 'unknown']],
+        groups: [
+          'builtin',
+          'external',
+          ['internal', 'parent', 'sibling', 'index'],
+          ['object', 'unknown']
+        ],
         pathGroups: [
           {
             pattern: 'react',

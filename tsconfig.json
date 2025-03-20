@@ -37,6 +37,14 @@
       "@components-styles/*": ["assets/styles/components/*"]
     }
   },
-  "include": ["src/**/*", "**/*.ts", "**/*.tsx", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "src/**/*",
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

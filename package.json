@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
@@ -17,7 +18,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.0",
-    "styled-components": "^6.1.14"
+    "styled-components": "^6.1.14",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

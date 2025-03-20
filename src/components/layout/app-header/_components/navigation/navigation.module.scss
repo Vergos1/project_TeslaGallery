@@ -7,3 +7,12 @@
     gap: 10px;
   }
 }
+
+@media (max-width: (963px)) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}

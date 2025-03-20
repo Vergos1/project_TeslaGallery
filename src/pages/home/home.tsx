@@ -1,20 +1,15 @@
 import { AppContainer } from '@components/layout'
-import { Carousel } from '@components/widgets'
-import { CarouselSlide } from '@components/widgets/swiper/_components/carousel-slide/carousel-slide'
-import { teslaModelsList } from '@core/constants/mock-data.constants'
+import { TeslaSwiper } from '@components/widgets'
+import { TeslaModelNamesList } from '@core/constants/mock-data.constants'
 import React from 'react'
+import styles from './home.module.scss'
 
-const HomePage: React.FC = () => {
+const { container } = styles
+
+const HomePage = () => {
   return (
-    <AppContainer>
-      <Carousel
-        itemGapInRem={1}
-        itemSizeInRem={10}
-        items={teslaModelsList.map(({ image, name, color }, index) => ({
-          id: index,
-          children: <CarouselSlide color={color} name={name} src={image} />
-        }))}
-      />
+    <AppContainer className={container}>
+      <TeslaSwiper data={TeslaModelNamesList} />
     </AppContainer>
   )
 }

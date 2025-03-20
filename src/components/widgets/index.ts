@@ -1,1 +1,1 @@
-export { Carousel } from './swiper';
+export { TeslaSwiper } from './swiper'

@@ -2,37 +2,79 @@
 @import '/src/assets/styles/abstracts/mixins';
 
 .button {
-  padding: $spacing-xs $spacing-md;
-  font-weight: $font-weight-medium;
-  font-size: $font-size-md;
-  color: $color-white;
-  background-color: $color-black;
-  border: $border-width-sm solid transparent;
-  box-sizing: border-box;
-  border-radius: $border-radius-xxxl;
-  cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    transform $animation-duration-fast ease;
-  &:hover {
-    transform: scale(1.05);
+    padding: $spacing-xs $spacing-md;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-md;
+    color: $color-white;
+    background-color: $color-black;
+    border: $border-width-sm solid transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: $border-radius-xxxl;
+    cursor: pointer;
+    -webkit-transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        -webkit-transform $animation-duration-fast ease;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        -webkit-transform $animation-duration-fast ease;
+    -o-transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform $animation-duration-fast ease;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform $animation-duration-fast ease;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform $animation-duration-fast ease,
+        -webkit-transform $animation-duration-fast ease;
+
+    &:hover {
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        color: $color-blue;
+        border-color: $color-blue;
+        background-color: $color-gray-15;
+    }
+
+    &:active {
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+}
+
+.buttonActive {
     color: $color-blue;
     border-color: $color-blue;
-
     background-color: $color-gray-15;
-  }
-  &:active {
-    transform: scale(0.95);
-  }
 }
+
 @media (max-width: (1490px)) {
-  .button {
-    padding: 4px 6px;
-  }
+    .button {
+        padding: 4px 6px;
+    }
 }
+
 @media (max-width: (990px)) {
-  .button {
-    font-size: 14px;
-  }
+    .button {
+        font-size: 14px;
+    }
+}
+
+@media (hover: none) {
+    .button:hover {
+        background-color: transparent;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border-color: $bg-backdrop-dark;
+        color: white;
+    }
 }
